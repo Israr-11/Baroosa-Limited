@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgb(6, 68, 16);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    /*Mean we are accessing all ul at the same time*/
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#menu li {
+    padding: 10px;
+}
+
+#main {
+    display: flex;
+}
+
+#main img {
+    width: 100%;
+    height: 60%;
+}
+
+#main a {
+    text-decoration: none;
+
+}
+
+aside {
+    flex: 0 0 20vw;
+    background: beige;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0px;
+}
+
+aside ul a {
+    color: rgb(46, 37, 231);
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid rgb(46, 37, 231);
+}
+
+.call-to-action {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.call-to-action a {
+    background: grey;
+    color: #fff;
+    padding: 8px 13px;
+}
+
+article {
+    padding: 10px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-box {
+    border: 1px solid #eee;
+    flex-basis: 32%;
+    padding: 10px;
+    max-width: 370px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.service-box img {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    background: rgb(6, 68, 16);
+    color: white;
+    font-size: 15px;
+    padding: 0px;
+}
+
+@media screen and (max-width:850px) {
+    .service-box {
+        flex-basis: 48%;
+    }
+
+    aside {
+        flex: 0 0 30vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+    header {
+        flex-direction: column;
+    }
+
+    #logo {
+        order: -1;
+    }
+
+    #main {
+        flex-direction: column;
+    }
+
+    article {
+        order: -1;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
